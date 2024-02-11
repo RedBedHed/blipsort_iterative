@@ -1,4 +1,4 @@
-# *Branchless-Lomuto in Pattern-Defeating Quicksort (Blipsort)*
+# *Iterative Branchless-Lomuto in Pattern-Defeating Quicksort (Blipsort)*
  
 A highly-optimized (and tiny) Introsort variant that draws from PDQsort, Java, and Orson Peter's branchless Lomuto partitioning. No recursion. Only lööps.
 
