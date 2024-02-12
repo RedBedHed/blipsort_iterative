@@ -1,8 +1,8 @@
 # *Iterative Branchless-Lomuto in Pattern-Defeating Quicksort (Blipsort)*
- 
-A highly-optimized (and tiny) Introsort variant that draws from PDQsort, Java, and Orson Peter's branchless Lomuto partitioning. No recursion. Only lööps.
 
 ![loops](loops.png)
+ 
+A highly-optimized (and tiny) Introsort variant that draws from PDQsort, Java, and Orson Peter's branchless Lomuto partitioning. No recursion. Only lööps.
 
 ## Complexity
 
@@ -14,6 +14,9 @@ A highly-optimized (and tiny) Introsort variant that draws from PDQsort, Java, a
 
 ### Branchless Lomuto
 The decades-old partitioning algorithm recently made a resurgence when researchers discovered ways to remove the inner branch. Orson Peter's method&mdash; which he published on his blog a little under two months ago&mdash; is the fastest yet. It employs a gap in the data to move elements twice per iteration rather than swapping them (three moves).
+
+### No Recursion
+This version of blipsort is completely iterative, with a small statically-allocated stack accommodating up to 31 intervals/heights. Iterative blipsort saves a significant amount of memory and avoids the peril of stack overflow, making it a viable candidate sort for medium to large embedded systems.
 
 ### Pivot Selectivity
 Blipsort carefully selects the pivot from the middle of five sorted candidates. These candidates allow the sort to determine whether the data in the current interval is approximately descending and inform its "partition left" strategy.
@@ -41,7 +44,6 @@ When all of the candidate pivots are strictly descending, it is very likely that
 
 [Here](https://github.com/orlp/pdqsort)
 is the PDQsort algorithm by Orson Peters
-
 
 [Here](https://orlp.net/blog/branchless-lomuto-partitioning/)
 is the branchless Lomuto blog post by Orson Peters
