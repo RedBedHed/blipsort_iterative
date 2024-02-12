@@ -16,7 +16,7 @@ A highly-optimized (and tiny) Introsort variant that draws from PDQsort, Java, a
 The decades-old partitioning algorithm recently made a resurgence when researchers discovered ways to remove the inner branch. Orson Peter's method&mdash; which he published on his blog a little under two months ago&mdash; is the fastest yet. It employs a gap in the data to move elements twice per iteration rather than swapping them (three moves).
 
 ### No Recursion
-This version of blipsort is completely iterative, with a small statically-allocated stack accommodating up to 32 intervals/heights. Iterative blipsort saves a significant amount of memory and avoids the peril of stack overflow, making it a viable candidate sort for medium to large embedded systems. Iterative blipsort performs just as well as its recursive counterpart.
+This version of blipsort is completely iterative, with a small statically-allocated stack accommodating up to 32 intervals/heights. Iterative blipsort avoids the peril of stack overflow, making it a viable candidate sort for medium to large embedded systems. Iterative blipsort performs just as well as its recursive counterpart.
 
 ### Pivot Selectivity
 Blipsort carefully selects the pivot from the middle of five sorted candidates. These candidates allow the sort to determine whether the data in the current interval is approximately descending and inform its "partition left" strategy.
