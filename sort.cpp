@@ -745,19 +745,19 @@ void qSort
         // Sort left portion.
         l1: if(l > low)
         {
+            // If the interval is small
+            // enough, use insertion
+            // sort.
+            if(ls < InsertionThreshold)
+                iSort<E, false>
+                (low == olow, low, l);
+
             // If we've seen too many
             // bad partitions, or if
             // the stack overflows,
             // use heapsort.
-            if(height <= 0 || s >= end)
+            else if(height <= 0 || s >= end)
                 hSort(low, l);
-
-            // If the interval is small
-            // enough, use insertion
-            // sort.
-            else if(ls < InsertionThreshold)
-                iSort<E, false>
-                (low == olow, low, l);
 
             // If the interval isn't sorted
             // push it onto the stack to
@@ -774,18 +774,18 @@ void qSort
         // Sort right portion.
         l2: if(high > g) 
         {
-            // If we've seen too many
-            // bad partitions, use 
-            // heapsort.
-            if(height <= 0)
-                hSort(g, high);
-
             // If the interval is small
             // enough, use insertion
             // sort.
-            else if(gs < InsertionThreshold)
+            if(gs < InsertionThreshold)
                 iSort<E, false>
                 (false, g, high);
+
+            // If we've seen too many
+            // bad partitions, use 
+            // heapsort.
+            else if(height <= 0)
+                hSort(g, high);
 
             // If the interval isn't sorted
             // address it now.
