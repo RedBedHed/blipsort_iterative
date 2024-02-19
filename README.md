@@ -10,6 +10,10 @@ A highly-optimized (and tiny) Introsort variant that draws from PDQsort, Java, a
 |------|---------|-------|--------|
 | n    | n log n | n log n | log n |
 
+## Visualization
+
+https://github.com/RedBedHed/blipsort_iterative/assets/58797872/8cfefd6e-98a2-421f-9ff4-d4eb005d61ac
+
 ## Techniques
 
 ### Branchless Lomuto
