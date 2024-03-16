@@ -2,7 +2,7 @@
 
 ![loops](loops.png)
  
-A highly-optimized (and tiny) Introsort variant that draws from PDQsort, Java, and Orson Peter's branchless Lomuto partitioning. No recursion. Only lööps.
+A highly-optimized (and tiny) Introsort variant that draws from PDQsort, Java, and Orson Peters' and Lukas Bergdoll's branchless Lomuto partitioning. No recursion. Only lööps.
 
 ## Complexity
 
@@ -19,7 +19,7 @@ https://github.com/RedBedHed/blipsort_iterative/assets/58797872/8cfefd6e-98a2-42
 ## Techniques
 
 ### Branchless Lomuto
-The decades-old partitioning algorithm recently made a resurgence when researchers discovered ways to remove the inner branch. Orson Peter's method&mdash; which he published on his blog a little under two months ago&mdash; is the fastest yet. It employs a gap in the data to move elements twice per iteration rather than swapping them (three moves).
+The decades-old partitioning algorithm recently made a resurgence when researchers discovered ways to remove the inner branch. Orson Peters' and Lukas Bergdoll's method&mdash; published a little under two months ago&mdash; is the fastest yet. It employs a gap in the data to move elements twice per iteration rather than swapping them (three moves).
 
 ### No Recursion
 This version of blipsort is completely iterative, with a small statically-allocated stack accommodating up to 32 intervals/heights. Iterative blipsort avoids the peril of stack overflow, making it a viable candidate sort for medium to large embedded systems. Iterative blipsort performs just as well as its recursive counterpart.
