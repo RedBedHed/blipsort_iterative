@@ -2,7 +2,7 @@
 
 ![loops](loops.png)
  
-A highly-optimized (and tiny) Introsort variant that draws from PDQsort, Java, and Orson Peters' and Lukas Bergdoll's branchless Lomuto partitioning. No recursion. Only lööps.
+A highly-optimized, memory-conscious Introsort variant that draws from PDQsort, Java, and Orson Peters' and Lukas Bergdoll's branchless Lomuto partitioning. No recursion. Only lööps.
 
 ## Complexity
 
