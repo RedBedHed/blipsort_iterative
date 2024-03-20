@@ -8,7 +8,7 @@ A highly-optimized, memory-conscious Introsort variant that draws from PDQsort, 
 
 | Best | Average | Worst | Memory |
 |------|---------|-------|--------|
-| n    | n log n | n log n | log n or 1 |
+| n    | n log n | n log n | 1 |
 
 ## Visualization
 
