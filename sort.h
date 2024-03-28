@@ -1,6 +1,6 @@
 #pragma once
-#ifndef BMSRS_SORT_H
-#define BMSRS_SORT_H
+#ifndef SORT_H
+#define SORT_H
 #include <iostream>
 #include <cassert>
 #include <bit>
@@ -1369,4 +1369,4 @@ namespace Arrays
     }
 }
 
-#endif //BMSRS_SORT_H
+#endif //SORT_H
